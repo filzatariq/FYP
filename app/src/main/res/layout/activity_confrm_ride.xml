@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/rider_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Rider"
+        android:background="#f04f23"
+        android:textColor="#ffff"
+        android:textSize="15dp"/>
+
+    <Button
+        android:id="@+id/driver_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="#f04f23"
+        android:text="Driver"
+        android:textColor="#ffff"
+        android:textSize="15dp" />
+
+</LinearLayout>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Source"
+    android:inputType="text"/>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Destination"
+    android:inputType="text"/>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Time"
+    android:inputType="datetime"/>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Day"
+    android:inputType="text"/>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Round Trip"
+    android:inputType="number"/>
+
+<EditText
+    android:id="@+id/seats_edit_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Available Seats"
+    android:inputType="number"/>
+
+<Button
+    android:id="@+id/confirm_ride_button"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:background="#f04f23"
+    android:text="Confirm Ride"
+    android:textColor="#ffff"
+    android:textSize="15dp"
+    android:layout_marginLeft="10dp"/>
+
+
+
+
+
+
+
+
+
+</LinearLayout>
