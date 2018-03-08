@@ -17,8 +17,6 @@ import android.preference.RingtonePreference;
 import android.text.TextUtils;
 import android.view.MenuItem;
 
-import brain.brainsoft.pdbsflhr22.brainsms.Prefmanagr.AppCompatPreferenceActivity;
-
 public class SettingsActivity extends AppCompatPreferenceActivity {
     private static final String TAG = SettingsActivity.class.getSimpleName();
 
@@ -137,8 +135,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
         Intent intent = new Intent(Intent.ACTION_SEND);
         intent.setType("message/rfc822");
-        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"info@brain.net.pk"});
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Query from Brain sms app");
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"filza@gmail.com"});
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Query from Shareride app");
         intent.putExtra(Intent.EXTRA_TEXT, body);
         context.startActivity(Intent.createChooser(intent, context.getString(R.string.choose_email_client)));
     }

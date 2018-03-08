@@ -12,9 +12,10 @@ import android.widget.Toast;
 
 public class SignupActivity extends Activity implements View.OnClickListener {
     int count = 0;
-    EditText ed_name,ed_email,ed_phone,ed_password,ed_plate;
+    EditText ed_name,ed_email,ed_phone,ed_password;
     TextView tv_login;
-    Button btn_register,btn_rider,btn_driver;
+    Button btn_register/*,btn_rider,btn_driver*/;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,36 +23,35 @@ public class SignupActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_signup);
 
         btn_register=findViewById(R.id.btn_register);
-        btn_rider=findViewById(R.id.btn_rider);
-        btn_driver=findViewById(R.id.btn_driver);
+        /*btn_rider=findViewById(R.id.btn_rider);
+        btn_driver=findViewById(R.id.btn_driver);*/
         ed_name=findViewById(R.id.ed_name);
         ed_email=findViewById(R.id.ed_email);
         ed_phone=findViewById(R.id.ed_phone);
         ed_password=findViewById(R.id.ed_password);
         tv_login=findViewById(R.id.tv_login);
-        ed_plate =findViewById(R.id.ed_plate);
+
 
         tv_login.setOnClickListener(this);
         btn_register.setOnClickListener(this);
-        btn_rider.setOnClickListener(this);
-        btn_driver.setOnClickListener(this);
-        ed_plate.setOnClickListener(this);
+        /*btn_rider.setOnClickListener(this);
+        btn_driver.setOnClickListener(this);*/
 
 
     }
 
 
     public void mSignUp(){
-        if (count == 0) {
+        /*if (count == 0) {
             btn_rider.setEnabled(false);
             btn_driver.setEnabled(false);
-        }
+        }*/
 
         final String str_name = ed_name.getText().toString();
         final String str_email = ed_email.getText().toString();
         final String str_phone = ed_phone.getText().toString();
         final String str_pwd = ed_password.getText().toString();
-        final String str_plate = ed_plate.getText().toString();
+
 
 
 
@@ -72,14 +72,10 @@ public class SignupActivity extends Activity implements View.OnClickListener {
             ed_password.requestFocus();
             return;
         }
-        if (TextUtils.isEmpty(str_plate)) {
-            ed_plate.setError("Can't be Empty");
-            ed_plate.requestFocus();
-            return;
-        }
 
-        Toast.makeText(this, ""+ed_name.getText().toString(), Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this,MainActivity.class));
+
+        Toast.makeText(this, "SignUp Successful", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this,LoginActivity.class));
 
     }
 
@@ -98,7 +94,7 @@ public class SignupActivity extends Activity implements View.OnClickListener {
                 finish();
 
                 break;
-            case R.id.btn_rider:
+            /*case R.id.btn_rider:
                 count++;
                 btn_rider.setEnabled(false);
                 Toast.makeText(this, "Button Disabled", Toast.LENGTH_LONG).show();
@@ -119,7 +115,7 @@ public class SignupActivity extends Activity implements View.OnClickListener {
                 mSignUp();
                 startActivity(new Intent(this,MapsActivity.class));
 
-                break;
+                break;*/
             default:
                 break;
         }

@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
+        if (id == R.id.nav_search) {
             Intent account =new Intent(MainActivity.this,MainActivity.class);
             startActivity(account);
         } else if (id == R.id.nav_rides) {
@@ -94,9 +94,9 @@ public class MainActivity extends AppCompatActivity
             Intent help =new Intent(MainActivity.this,AboutUs.class);
             startActivity(help);
         }  else if (id == R.id.nav_setting) {
-            Intent setting =new Intent(MainActivity.this,ActivityEdit_profile.class);
+            Intent setting =new Intent(MainActivity.this,SettingsActivity.class);
             startActivity(setting);
-        } else if (id == R.id.nav_invite) {
+        } else if (id == R.id.nav_share) {
             Intent invite =new Intent(MainActivity.this,MainActivity.class);
             startActivity(invite);
 
@@ -105,10 +105,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(rate);
 
         }
-        else if (id == R.id.captain) {
-            Intent driver =new Intent(MainActivity.this,SignupActivity.class);
-            startActivity(driver);
-        }
+
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -10,25 +10,31 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:src="@mipmap/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.pdbsflhr22.shareride.SplashActivity" />
-        <activity android:name="com.example.pdbsflhr22.shareride.WelcomeActivity">
+
+
+        <activity android:name=".SplashActivity" />
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.pdbsflhr22.shareride.BeforeLogin" />
-        <activity android:name="com.example.pdbsflhr22.shareride.LoginActivity" />
-        <activity android:name="com.example.pdbsflhr22.shareride.SignupActivity" />
+        <activity android:name=".BeforeLogin" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".SignupActivity" />
         <activity
-            android:name="com.example.pdbsflhr22.shareride.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" >
+
+
+
+        </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -42,19 +48,20 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.example.pdbsflhr22.shareride.MapsActivity"
+            android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name="com.example.pdbsflhr22.shareride.ConfirmRide" />
-        <activity android:name="com.example.pdbsflhr22.shareride.RideActivity" />
-        <activity android:name="com.example.pdbsflhr22.shareride.Recycler" />
-        <activity android:name="com.example.pdbsflhr22.shareride.MyRide" />
-        <activity android:name="com.example.pdbsflhr22.shareride.Schedule" />
-        <activity android:name="com.example.pdbsflhr22.shareride.History" />
-        <activity android:name="com.example.pdbsflhr22.shareride.Profile"/>
-        <activity android:name="com.example.pdbsflhr22.shareride.AboutUs"/>
-        <activity android:name="com.example.pdbsflhr22.shareride.ActivityEdit_profile"/>
-        <activity android:name="com.example.pdbsflhr22.shareride.SettingsActivity" />
-
+        <activity android:name=".ConfirmRide" />
+        <activity android:name=".RideActivity" />
+        <activity android:name=".Recycler" />
+        <activity android:name=".MyRide" />
+        <activity android:name=".Schedule" />
+        <activity android:name=".History" />
+        <activity android:name=".Profile" />
+        <activity android:name=".AboutUs" />
+        <activity android:name=".ActivityEdit_profile" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>
