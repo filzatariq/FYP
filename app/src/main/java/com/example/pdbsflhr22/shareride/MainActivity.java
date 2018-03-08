@@ -1,10 +1,8 @@
-package com.example.pdbsflhr22.generalprototype;
+package com.example.pdbsflhr22.shareride;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -17,7 +15,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     TextView tv_register;
     Button btn_post;
@@ -45,7 +43,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         btn_post=(Button) findViewById(R.id.btn_post);
-        btn_post.setOnClickListener(this);
+      //  btn_post.setOnClickListener(this);
     }
 
     @Override
@@ -96,7 +94,7 @@ public class MainActivity extends AppCompatActivity
             Intent help =new Intent(MainActivity.this,AboutUs.class);
             startActivity(help);
         }  else if (id == R.id.nav_setting) {
-            Intent setting =new Intent(MainActivity.this,SettingActivity.class);
+            Intent setting =new Intent(MainActivity.this,ActivityEdit_profile.class);
             startActivity(setting);
         } else if (id == R.id.nav_invite) {
             Intent invite =new Intent(MainActivity.this,MainActivity.class);
@@ -117,7 +115,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
+    /*@Override
     public void onClick(View view) {
 
         switch (view.getId()){
@@ -129,5 +127,5 @@ public class MainActivity extends AppCompatActivity
                 break;
                 default:break;
         }
-    }
+    }*/
 }

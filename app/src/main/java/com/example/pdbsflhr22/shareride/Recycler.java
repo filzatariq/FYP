@@ -1,4 +1,4 @@
-package com.example.pdbsflhr22.generalprototype;
+package com.example.pdbsflhr22.shareride;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

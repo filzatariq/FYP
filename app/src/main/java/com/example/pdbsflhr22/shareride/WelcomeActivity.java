@@ -1,4 +1,4 @@
-package com.example.pdbsflhr22.generalprototype;
+package com.example.pdbsflhr22.shareride;
 
 import android.app.Activity;
 import android.content.Context;
@@ -18,7 +18,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.pdbsflhr22.generalprototype.common.SliderPrefManager;
+import com.example.pdbsflhr22.shareride.common.SliderPrefManager;
 
 public class WelcomeActivity extends Activity {
 

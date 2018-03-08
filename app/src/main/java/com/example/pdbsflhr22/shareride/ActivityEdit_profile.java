@@ -1,4 +1,4 @@
-package com.example.pdbsflhr22.generalprototype;
+package com.example.pdbsflhr22.shareride;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,8 +10,7 @@ import android.widget.Button;
  * Created by KaNza_Yahya on 23/02/2018.
  */
 
-public class SettingActivity extends AppCompatActivity{
-
+public class ActivityEdit_profile extends AppCompatActivity{
 
         Button btn_back, btn_update;
         @Override
@@ -25,7 +24,7 @@ public class SettingActivity extends AppCompatActivity{
             btn_back.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(com.example.pdbsflhr22.generalprototype.SettingActivity.this, MainActivity.class);
+                    Intent intent = new Intent(ActivityEdit_profile.this, MainActivity.class);
                     startActivity(intent);
                     finish();
                 }

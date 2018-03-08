@@ -1,4 +1,4 @@
-package com.example.pdbsflhr22.generalprototype;
+package com.example.pdbsflhr22.shareride;
 
 import android.Manifest;
 import android.content.Intent;

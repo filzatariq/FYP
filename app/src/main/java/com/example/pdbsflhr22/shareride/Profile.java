@@ -1,4 +1,4 @@
-package com.example.pdbsflhr22.generalprototype;
+package com.example.pdbsflhr22.shareride;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -16,7 +16,7 @@ public class Profile extends AppCompatActivity {
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(com.example.pdbsflhr22.generalprototype.Profile.this, MainActivity.class);
+                Intent intent = new Intent(com.example.pdbsflhr22.shareride.Profile.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }

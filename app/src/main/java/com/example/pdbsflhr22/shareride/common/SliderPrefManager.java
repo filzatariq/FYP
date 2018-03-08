@@ -1,4 +1,4 @@
-package com.example.pdbsflhr22.generalprototype.common;
+package com.example.pdbsflhr22.shareride.common;
 
 import android.content.Context;
 import android.content.SharedPreferences;
