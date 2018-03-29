@@ -87,12 +87,15 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_search) {
             Intent account =new Intent(MainActivity.this,MainActivity.class);
             startActivity(account);
+        } else if (id == R.id.nav_addrides) {
+            Intent addride =new Intent(MainActivity.this,AddRide.class);
+            startActivity(addride);
         } else if (id == R.id.nav_rides) {
-            Intent myrides =new Intent(MainActivity.this,RideActivity.class);
+            Intent myrides =new Intent(MainActivity.this,MyRide.class);
             startActivity(myrides);
-        } else if (id == R.id.nav_help) {
-            Intent help =new Intent(MainActivity.this,AboutUs.class);
-            startActivity(help);
+        }  else if (id == R.id.nav_profile) {
+            Intent profile =new Intent(MainActivity.this,ActivityEdit_profile.class);
+            startActivity(profile);
         }  else if (id == R.id.nav_setting) {
             Intent setting =new Intent(MainActivity.this,SettingsActivity.class);
             startActivity(setting);

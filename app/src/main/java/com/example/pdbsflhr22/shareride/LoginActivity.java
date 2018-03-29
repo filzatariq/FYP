@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class LoginActivity extends Activity implements View.OnClickListener {
 
     int count = 0;
-    Button btn_login/*,btn_rider,btn_driver*/;
+    Button btn_login;
     EditText Ed_username,Ed_password;
     TextView tv_register;
     @Override
@@ -22,24 +22,15 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.activity_login);
 
         btn_login=findViewById(R.id.btn_login);
-       /* btn_rider=findViewById(R.id.btn_rider);
-        btn_driver=findViewById(R.id.btn_driver);*/
         Ed_username=findViewById(R.id.Ed_username);
         Ed_password=findViewById(R.id.Ed_password);
         tv_register=findViewById(R.id.tv_register);
 
         btn_login.setOnClickListener(this);
         tv_register.setOnClickListener(this);
-        /*btn_rider.setOnClickListener(this);
-        btn_driver.setOnClickListener(this);*/
     }
 
     public void mLogin(){
-/*
-            if (count == 0) {
-                btn_rider.setEnabled(false);
-                btn_driver.setEnabled(false);
-            }*/
 
         final String str_username = Ed_username.getText().toString();
         final String str_password = Ed_password.getText().toString();
@@ -58,6 +49,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
         Toast.makeText(this, "Successfully Login\t"+Ed_username.getText().toString(), Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this,MainActivity.class));
+        finish();
 
     }
 
@@ -67,8 +59,8 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
             case R.id.btn_login:
                 mLogin();
-                startActivity(new Intent(LoginActivity.this,MainActivity.class));
-                finish();
+               //
+               // finish();
                 break;
 
             case R.id.tv_register:

@@ -13,10 +13,11 @@ import android.widget.Button;
 public class ActivityEdit_profile extends AppCompatActivity{
 
         Button btn_back, btn_update;
+        // EditText etname;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.setting);
+            setContentView(R.layout.userprofile);
 
             btn_back=(Button)findViewById(R.id.btn_back);
             btn_update=(Button)findViewById(R.id.btn_update);
