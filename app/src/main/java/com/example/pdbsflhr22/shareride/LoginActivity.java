@@ -67,20 +67,6 @@ public class LoginActivity extends Activity implements View.OnClickListener {
                 startActivity(new Intent(LoginActivity.this,SignupActivity.class));
                 finish();
                 break;
-            /*case R.id.btn_rider:
-                count++;
-                btn_rider.setEnabled(false);
-                Toast.makeText(this, "Button Disabled", Toast.LENGTH_LONG).show();
-                btn_driver.setEnabled(true);
-                mLogin();
-                break;
-            case R.id.btn_driver:
-                Toast.makeText(this, "Button Disabled", Toast.LENGTH_LONG).show();
-                count--;
-                btn_rider.setEnabled(true);
-                btn_driver.setEnabled(false);
-                mLogin();
-                break;*/
             default:
                 break;
         }

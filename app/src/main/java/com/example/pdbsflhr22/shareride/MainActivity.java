@@ -108,6 +108,11 @@ public class MainActivity extends AppCompatActivity
             startActivity(rate);
 
         }
+        else if (id == R.id.nav_exit) {
+            System.exit(0);
+
+        }
+
 
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
