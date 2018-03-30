@@ -3,9 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://E:\gitRepository\Repository\Vizrah_orignal\ShareRide\GeneralPrototype.iml" filepath="E:\gitRepository\Repository\Vizrah_orignal\ShareRide\GeneralPrototype.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ShareRide.iml" filepath="$PROJECT_DIR$/ShareRide.iml" />
+      <module fileurl="file://C:\Users\sania\Desktop\fyp\ShareRide.iml" filepath="C:\Users\sania\Desktop\fyp\ShareRide.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://E:\gitRepository\Repository\Vizrah_orignal\ShareRide\app\app.iml" filepath="E:\gitRepository\Repository\Vizrah_orignal\ShareRide\app\app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fyp.iml" filepath="$PROJECT_DIR$/fyp.iml" />
     </modules>
   </component>
 </project>
