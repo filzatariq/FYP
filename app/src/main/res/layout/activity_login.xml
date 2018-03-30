@@ -78,7 +78,6 @@
             android:layout_height="40dp"
             android:textColor="#FFF7473A"
             android:inputType="textPassword"
-
             android:textColorHint="#FFF7473A"
             android:hint="Password"
             android:paddingLeft="4dp" />
