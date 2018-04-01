@@ -119,18 +119,4 @@ public class MainActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-    /*@Override
-    public void onClick(View view) {
-
-        switch (view.getId()){
-            case R.id.btn_post:
-                startActivity(new Intent(MainActivity.this,MapsActivity.class));
-            break;
-            case R.id.btn_find:
-                startActivity(new Intent(MainActivity.this,RideActivity.class));
-                break;
-                default:break;
-        }
-    }*/
 }

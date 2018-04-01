@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class Schedule extends AppCompatActivity {
 
-    Button button;
+    Button button,hostorybutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

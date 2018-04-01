@@ -1,6 +1,7 @@
 package com.example.pdbsflhr22.shareride;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,47 +11,47 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.backendless.Backendless;
+import com.backendless.BackendlessUser;
+import com.backendless.async.callback.AsyncCallback;
+import com.backendless.exceptions.BackendlessFault;
+
 public class SignupActivity extends Activity implements View.OnClickListener {
+    private static String APPID = "78B99260-0440-BC64-FF07-0D8B00C0FF00";
+    private static String APIKEY = "CFB37F63-3F25-54D1-FFE4-3FA539FAF700";
     int count = 0;
-    EditText ed_name,ed_email,ed_phone,ed_password;
+    EditText ed_name,ed_email,ed_password;
     TextView tv_login;
-    Button btn_register/*,btn_rider,btn_driver*/;
+    Button btn_register;
 
-
+    BackendlessUser user = new BackendlessUser();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
         btn_register=findViewById(R.id.btn_register);
-        /*btn_rider=findViewById(R.id.btn_rider);
-        btn_driver=findViewById(R.id.btn_driver);*/
         ed_name=findViewById(R.id.ed_name);
         ed_email=findViewById(R.id.ed_email);
-        ed_phone=findViewById(R.id.ed_phone);
         ed_password=findViewById(R.id.ed_password);
         tv_login=findViewById(R.id.tv_login);
+        Backendless.initApp(this, APPID, APIKEY);
 
 
         tv_login.setOnClickListener(this);
         btn_register.setOnClickListener(this);
-        /*btn_rider.setOnClickListener(this);
-        btn_driver.setOnClickListener(this);*/
 
 
     }
 
 
     public void mSignUp(){
-        /*if (count == 0) {
-            btn_rider.setEnabled(false);
-            btn_driver.setEnabled(false);
-        }*/
-
         final String str_name = ed_name.getText().toString();
         final String str_email = ed_email.getText().toString();
-        final String str_phone = ed_phone.getText().toString();
         final String str_pwd = ed_password.getText().toString();
+        user.setEmail(ed_email.getText().toString());
+        user.setPassword(ed_password.getText().toString());
+        user.setProperty("name", ed_name.getText().toString());
 
 
 
@@ -63,20 +64,31 @@ public class SignupActivity extends Activity implements View.OnClickListener {
             ed_email.setError("Email Field Can't be Empty");
             ed_email.requestFocus();
             return;
-        }if (TextUtils.isEmpty(str_phone)) {
-            ed_phone.setError("Can't be Empty");
-            ed_phone.requestFocus();
-            return;
         }if (TextUtils.isEmpty(str_pwd)) {
             ed_password.setError("Can't be Empty");
             ed_password.requestFocus();
             return;
         }
+        Backendless.UserService.register(user, new AsyncCallback<BackendlessUser>() {
+            @Override
+            public void handleResponse(BackendlessUser response) {
+                //  progressBar.setVisibility(View.INVISIBLE);
+                Toast.makeText(getContext(), "User has been registered", Toast.LENGTH_LONG).show();
+            }
 
+            @Override
+            public void handleFault(BackendlessFault fault) {
+//                Toast.makeText(getContext(), fault.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
 
         Toast.makeText(this, "SignUp Successful", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(this,LoginActivity.class));
+        startActivity(new Intent(this,MainActivity.class));
+        finish();
 
+    }
+    public Context getContext() {
+        return this;
     }
 
     @Override
@@ -90,32 +102,9 @@ public class SignupActivity extends Activity implements View.OnClickListener {
 
             case R.id.btn_register:
                 mSignUp();
-                startActivity(new Intent(this,MapsActivity.class));
-                finish();
-
-                break;
-            /*case R.id.btn_rider:
-                count++;
-                btn_rider.setEnabled(false);
-                Toast.makeText(this, "Button Disabled", Toast.LENGTH_LONG).show();
-                btn_driver.setEnabled(true);
-                mSignUp();
-                ed_plate.setVisibility(View.INVISIBLE);
-
-                startActivity(new Intent(this,MapsActivity.class));
 
 
                 break;
-            case R.id.btn_driver:
-                Toast.makeText(this, "Button Disabled", Toast.LENGTH_LONG).show();
-                count--;
-                btn_rider.setEnabled(true);
-                btn_driver.setEnabled(false);
-                ed_plate.setVisibility(View.VISIBLE);
-                mSignUp();
-                startActivity(new Intent(this,MapsActivity.class));
-
-                break;*/
             default:
                 break;
         }

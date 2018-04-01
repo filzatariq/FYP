@@ -59,11 +59,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <EditText
-            android:id="@+id/Ed_username"
+            android:id="@+id/Ed_email"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:textColor="#FFF7473A"
-            android:hint="User Name"
+            android:hint="Email"
             android:textColorHint="#FFF7473A"
             android:paddingLeft="4dp" />
     </android.support.design.widget.TextInputLayout>

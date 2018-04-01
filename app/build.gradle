@@ -62,6 +62,7 @@ dependencies {
 
     implementation 'com.android.support:support-v4:27.1.0'
     implementation 'com.android.support:support-vector-drawable:27.1.0'
+    implementation group: 'com.backendless', name: 'backendless', version: '4.4.0'
 
     compile 'com.github.bumptech.glide:glide:3.8.0'
     compile 'com.android.support:multidex:1.0.3'
