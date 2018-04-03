@@ -51,14 +51,12 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".AddRide"/>
-        <activity android:name=".ConfirmRide" />
-        <activity android:name=".RideActivity" />
-        <activity android:name=".Recycler" />
         <activity android:name=".MyRide" />
         <activity android:name=".Schedule" />
         <activity android:name=".History" />
         <activity android:name=".Profile" />
-        <activity android:name=".AboutUs" />
+        <activity android:name=".common.FindRide" />
+        <activity android:name=".RideDetails" />
         <activity android:name=".ActivityEdit_profile" />
         <activity
             android:name=".SettingsActivity"

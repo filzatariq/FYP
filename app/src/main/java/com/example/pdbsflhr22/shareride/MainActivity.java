@@ -14,6 +14,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.pdbsflhr22.shareride.common.FindRide;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -85,8 +87,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_search) {
-            Intent account =new Intent(MainActivity.this,MainActivity.class);
-            startActivity(account);
+            Intent findride =new Intent(MainActivity.this,FindRide.class);
+            startActivity(findride);
         } else if (id == R.id.nav_addrides) {
             Intent addride =new Intent(MainActivity.this,AddRide.class);
             startActivity(addride);

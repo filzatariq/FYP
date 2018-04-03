@@ -86,8 +86,10 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         switch (v.getId()){
 
             case R.id.btn_login:
-                mLogin();
-               //
+             //   mLogin();
+                Toast.makeText(this, "Successfully Login\t"+Ed_email.getText().toString(), Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this,MainActivity.class));
+        finish();
                // finish();
                 break;
 
